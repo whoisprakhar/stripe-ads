@@ -1,4 +1,4 @@
-var HOST = 'http://localhost:3000';
+var HOST = 'https://ads-placement.herokuapp.com';
 var itemClassName = 'list-group-item placement-item';
 
 function addEvent(elms, event, callback) {
