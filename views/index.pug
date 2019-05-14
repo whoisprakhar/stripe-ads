@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    title="Ad Placements"
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    link(href='/css/bootstrap.css', rel='stylesheet')
+    link(href='/css/app.css', rel='stylesheet')
+
+  body(class='d-flex flex-column bg-light')
+    .container.m-auto
+      div(class='placements-container bg-white rounded p-4 mx-auto border')
+        h5.text-center Chose Ad Placement
+        .text-center.my-5
+          a.d-inline-block.mx-3(href='/placements/individual')
+            img.img-placement(src='/img/individual.png')
+            span Individual
+
+          a.d-inline-block.mx-3(href='/placements/smb')
+            img.img-placement(src='/img/smb.png')
+            span Small Businesses

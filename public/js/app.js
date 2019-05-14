@@ -22,8 +22,8 @@ function app() {
       items: [
         { sku: selectedSkuId, quantity: 1 }
       ],
-      successUrl: HOST + '/success',
-      cancelUrl: HOST + '/cancelled',
+      successUrl: HOST + '/payment/success',
+      cancelUrl: HOST + '/payment/cancelled',
     }).then(function (result) {
       alert.classList.remove('d-none');
       alert.innerHTML = result.error.message;

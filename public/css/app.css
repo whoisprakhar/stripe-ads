@@ -11,6 +11,11 @@ ul {
 }
 
 
+a {
+  text-decoration: none !important;
+}
+
+
 .placements-container {
   max-width: 500px;
 }
@@ -24,4 +29,10 @@ ul {
 
 .placement-item:hover {
   background: #fafafa;
+}
+
+.img-placement {
+  width: 150px;
+  height: 120px;
+  display: block;
 }
