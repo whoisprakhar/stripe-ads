@@ -17,8 +17,7 @@ html(lang="en")
               span=placement.title
               span.badge.badge-success.ml-auto= 'USD ' + placement.price
 
-        button.btn.btn-primary.btn-block.font-weight-bold#pay-button Pay Now
+        a.btn.btn-primary.btn-block.font-weight-bold#btn-continue(href='#') Continue
 
 
-    script(src='https://js.stripe.com/v3/', type='text/javascript')
-    script(src='/js/app.js', type='text/javascript')
+    script(src='/js/placements.js', type='text/javascript')
