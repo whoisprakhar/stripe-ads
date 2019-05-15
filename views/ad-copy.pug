@@ -9,9 +9,10 @@ html(lang="en")
     .container.m-auto
       div(class='placements-container bg-white rounded p-4 mx-auto border')
         h5.text-center Write your ad copy
+        .alert.alert-danger.mt-3.d-none
         textarea.form-control.my-3(rows='5', placeholder='Write your ad copy here')
 
-        button.btn.btn-primary.btn-block.font-weight-bold#btn-pay Continue
+        button.btn.btn-primary.btn-block.font-weight-bold Continue
 
     script(src='https://js.stripe.com/v3/', type='text/javascript')
     script(src='/js/ad-copy.js', type='text/javascript')
