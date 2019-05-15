@@ -4,8 +4,13 @@ var HOST = 'https://ads-placement.herokuapp.com';
 function app() {
   var stripe = Stripe('pk_test_GnrilSm9CZKcyUrLja2xzrrH');
 
-  var mPayButton = document.getElementById('btn-pay');
-  var mAdCopyTextArea = document.getElementsByTagName('textarea')[0];
+  var url = window.location.href.split('/');
+  var skuId = 'sku_' + url[url.length - 1];
+
+  var mPayButton = document.querySelector('button');
+
+  var mAdCopyTextArea = document.querySelector('textarea');
+  var alert = document.querySelector('.alert');
 
   mPayButton.disabled = true;
 
@@ -14,9 +19,6 @@ function app() {
   };
 
   mPayButton.onclick = function(event) {
-    var url = window.location.href.split('/');
-    var skuId = 'sku_' + url[url.length - 1];
-
     stripe.redirectToCheckout({
       items: [
         { sku: skuId, quantity: 1 }

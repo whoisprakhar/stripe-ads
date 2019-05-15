@@ -10,10 +10,9 @@ html(lang="en")
     .container.m-auto
       div(class='placements-container bg-white rounded p-4 mx-auto border')
         h5.text-center Chose Ad Placement
-        .alert.alert-danger.mt-3.d-none
         ul.list-group.my-3
           each placement in placements
-            li(class='list-group-item placement-item', data-sku-id=placement.skuId, data-price=placement.price)
+            li(class='list-group-item placement-item', data-sku-id=placement.skuId)
               span=placement.title
               span.badge.badge-success.ml-auto= 'USD ' + placement.price
 

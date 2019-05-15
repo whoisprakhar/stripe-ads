@@ -1,5 +1,3 @@
-var itemClassName = 'list-group-item placement-item';
-
 function addEvent(elms, event, callback) {
   for (var i = 0; i < elms.length; i++) {
     elms[i].addEventListener(event, callback);
@@ -8,19 +6,13 @@ function addEvent(elms, event, callback) {
 
 
 function app() {
-  var selectedSkuId = null, selectedItem = null;
+  var itemClassName = 'list-group-item placement-item';
+  var selectedItem = null;
 
-  var mContinueBtn = document.getElementById('btn-continue');
-
+  var mContinueBtn = document.querySelector('a');
   var items = document.getElementsByClassName('placement-item');
-  var alert = document.getElementsByClassName('alert')[0];
-
 
   addEvent(items, 'click', function(event) {
-    if (alert.className.indexOf('d-none') == -1) {
-      alert.classList.add('d-none');
-    }
-
     var target = event.currentTarget;
 
     selectedSkuId = target.dataset.skuId;

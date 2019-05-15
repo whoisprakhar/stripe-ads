@@ -1,4 +1,4 @@
-const HomeController = require('./home-controller');
+const HomeController = require('./home');
 const PlacementController = require('./placements');
 const PaymentController = require('./payment');
 const AdCopyController = require('./ad-copy');
