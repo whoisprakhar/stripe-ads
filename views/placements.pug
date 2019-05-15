@@ -12,7 +12,7 @@ html(lang="en")
         h5.text-center Chose Ad Placement
         ul.list-group.my-3
           each placement in placements
-            li(class='list-group-item placement-item', data-sku-id=placement.skuId)
+            li.list-group-item.d-flex.align-items-center.cp(data-sku-id=placement.skuId)
               span=placement.title
               span.badge.badge-success.ml-auto= 'USD ' + placement.price
 

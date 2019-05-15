@@ -15,20 +15,12 @@ a {
   text-decoration: none !important;
 }
 
-
 .placements-container {
   max-width: 500px;
 }
 
-
-.placement-item {
-  display: flex;
-  align-items: center;
+.cp {
   cursor: pointer;
-}
-
-.placement-item:hover {
-  background: #fafafa;
 }
 
 .img-placement {

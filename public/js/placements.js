@@ -6,11 +6,10 @@ function addEvent(elms, event, callback) {
 
 
 function app() {
-  var itemClassName = 'list-group-item placement-item';
   var selectedItem = null;
 
   var mContinueBtn = document.querySelector('a');
-  var items = document.getElementsByClassName('placement-item');
+  var items = document.getElementsByClassName('list-group-item');
 
   addEvent(items, 'click', function(event) {
     var target = event.currentTarget;
@@ -19,10 +18,10 @@ function app() {
     mContinueBtn.href = '/ad-copy/' + target.dataset.skuId.split('_')[1];
 
     if (selectedItem) {
-      selectedItem.className = itemClassName;
+      selectedItem.classList.remove('active');
     }
 
-    target.className += ' bg-primary text-white';
+    target.classList.add('active');
     selectedItem = target;
   });
 }
